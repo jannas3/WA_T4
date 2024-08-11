@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        p.instrucoes {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .actions input[type="reset"],
+        .actions input[type="submit"] {
+            width: 48%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .actions input[type="reset"]:hover,
+        .actions input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulário de Contato</h1>
+    <p class="instrucoes">Por favor, preencha o formulário abaixo e clique no botão Enviar mensagem. Agradecemos por seu contato.</p>
+
+    <form action="#" method="post">
+        <!-- Dados Básicos -->
+        <fieldset>
+            <legend>Dados Básicos</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+        </fieldset>
+
+        <!-- Selecione seu Curso -->
+        <fieldset>
+            <legend>Selecione seu Curso</legend>
+            <input type="radio" name="curso" value="cc" id="cc">
+            <label for="cc">Ciência da Computação</label><br>
+            <input type="radio" name="curso" value="es" id="es">
+            <label for="es">Engenharia de Software</label><br>
+            <input type="radio" name="curso" value="ec" id="ec">
+            <label for="ec">Engenharia da Computação</label><br>
+        </fieldset>
+
+        <!-- Linguagens -->
+        <fieldset>
+            <legend>Assinale as Linguagens já usadas por você</legend>
+            <label><input type="checkbox" name="linguagens" value="java"> Java</label>
+            <label><input type="checkbox" name="linguagens" value="c"> C</label>
+            <label><input type="checkbox" name="linguagens" value="c++"> C++</label>
+            <label><input type="checkbox" name="linguagens" value="perl"> Perl</label>
+            <label><input type="checkbox" name="linguagens" value="python"> Python</label>
+            <label><input type="checkbox" name="linguagens" value="javascript"> JavaScript</label>
+        </fieldset>
+
+        <!-- Dados Complementares -->
+        <fieldset>
+            <legend>Dados Complementares</legend>
+            <label for="cor-favorita">Cor favorita:</label>
+            <input type="text" id="cor-favorita" name="cor-favorita">
+
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento">
+
+            <label for="ano-entrada">Ano de entrada em seu Curso do Icomp:</label>
+            <input type="number" id="ano-entrada" name="ano-entrada" min="2000" max="2024">
+
+            <label for="nota-site">Nota para este site:</label>
+            <input type="number" id="nota-site" name="nota-site" min="0" max="10">
+        </fieldset>
+
+        <!-- Área de Atuação -->
+        <fieldset>
+            <legend>Área de Atuação</legend>
+            <label for="area-atuacao">Área de atuação:</label>
+            <select id="area-atuacao" name="area-atuacao">
+                <option value="banco-de-dados">Banco de Dados</option>
+                <option value="desenvolvimento-web">Desenvolvimento Web</option>
+                <option value="inteligencia-artificial">Inteligência Artificial</option>
+                <option value="seguranca-da-informacao">Segurança da Informação</option>
+            </select>
+        </fieldset>
+
+        <!-- Currículo -->
+        <fieldset>
+            <legend>Submeta seu Currículo</legend>
+            <input type="file" id="curriculo" name="curriculo">
+        </fieldset>
+
+        <!-- Mensagem -->
+        <fieldset>
+            <legend>Mensagem</legend>
+            <label for="mensagem">Digite sua Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+        </fieldset>
+
+        <!-- Ações -->
+        <div class="actions">
+            <input type="reset" value="Resetar Dados">
+            <input type="submit" value="Enviar Mensagem">
+        </div>
+    </form>
+
+</body>
+</html>
