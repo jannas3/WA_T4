@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background-color: #f0f0f0; 
+            position: relative; 
+        }
+        .image-container {
+            position: relative;
+            max-width: 800px; 
+            width: 100%; 
+        }
+        img {
+            width: 100%; 
+            height: auto;
+        }
+        .info-box {
+            position: absolute;
+            top: 50%; 
+            left: 20px; 
+            transform: translateY(-50%); 
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            width: 200px;
+            border: 8px solid #CE853E; 
+            text-align: left; 
+        }
+        .info-box h3 {
+            margin: 0 0 10px; 
+        }
+        .info-box p {
+            margin: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/nebulosa.jpg" alt="Nebulosa do Anel">
+        <div class="info-box">
+            <h3>Nebulosa do Anel</h3>
+            <p>Imagem capturada pelo Telescópio James Webb, mostrando detalhes impressionantes da Nebulosa do Anel do Sul. Nebulosas são nuvens interestelares compostas por poeiras e gases. Elas podem estar associadas a diversos fenômenos, desde a morte de estrelas até o surgimento de sistemas solares novos.
+             Um dos tipos mais comuns são as nebulosas planetárias, como é o caso da Anel do Sul. Apesar do título, elas nada têm a ver com planetas. Na verdade, essas nuvens são causadas pela morte de estrelas do tipo gigantes vermelhas.</p>
+        </div>
+    </div>
+</body>
+</html>
