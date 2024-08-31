@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q5</title>
+</head>
+<body>
+    <h1>Várias listas</h1>
+  
+    <p id="lista-titulo" name="lista">Lista de itens:</p>
+  
+    <ul class="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-2">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-3">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-4">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+    <script>
+      // Corrigindo a seleção da lista com a classe correta
+      var lista = document.querySelector('.lista-itens-2');
+  
+      // Obtendo todos os itens da lista
+      var itens = lista.getElementsByTagName('li');
+      
+      // Percorrendo todos os itens da lista
+      for (var i = 0; i < itens.length; i++) {
+          // Alterando a cor do texto para laranja
+          itens[i].style.setProperty('color', 'orange');
+          
+          // Substituindo a classe "hot" por "cold"
+          if (itens[i].classList.contains('hot')) {
+              itens[i].classList.replace('hot', 'cold');
+          }
+      }
+  </script>
+  </body>

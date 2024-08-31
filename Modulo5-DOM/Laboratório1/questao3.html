@@ -1,0 +1,46 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <p id="lista-titulo" name="lista">Lista de itens:</p>
+  
+    <ul class="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-2">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-3">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-4">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+     
+    <script>
+    
+      var listaItens2 = document.getElementsByClassName('lista-itens-2')[0].getElementsByTagName('li');
+      for (var i = 0; i < listaItens2.length; i++) {
+          console.log(listaItens2[i]);
+      }
+     
+      var listaItensHot = document.getElementsByClassName('lista-itens-2')[0].getElementsByClassName('hot');
+      for (var i = 0; i < listaItensHot.length; i++) {
+          console.log(listaItensHot[i]);
+      }
+  </script>
+  </body>
