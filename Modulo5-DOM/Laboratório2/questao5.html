@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q5</title>
+</head>
+<body>
+    <h1>To-do</h1>
+  
+    <div>
+      <p id="lista-titulo" name="lista">Lista de atividades:</p>
+    </div>
+  
+    <div>
+      <input id="novo-item" placeholder="Digite aqui o item" />
+      <button id="add-item">Adicionar</button>
+    </div>
+  
+    <ul id="lista-itens">
+      <li>item a</li>
+    </ul>
+  
+    <div>
+      <button id="remover-item">Remover último item</button>
+    </div>
+    <script>
+       
+        const input = document.getElementById('novo-item');
+        const adicionarButton = document.getElementById('add-item');
+        const removerButton = document.getElementById('remover-item');
+        const listaItens = document.getElementById('lista-itens');
+
+       
+        function adicionarItem() {
+            const itemTexto = input.value.trim();
+            if (itemTexto !== '') {
+                const novoItem = document.createElement('li');
+                novoItem.textContent = itemTexto;
+                listaItens.appendChild(novoItem);
+                input.value = ''; 
+            } else {
+                alert('Digite um item válido.');
+            }
+        }
+
+       
+        function removerItem() {
+            if (listaItens.children.length > 1) { 
+                listaItens.removeChild(listaItens.lastChild);
+            } else if (listaItens.children.length === 1) {
+                alert('A lista não pode ficar vazia. Você deve manter pelo menos um item.');
+            } else {
+                alert('Não há itens para remover.');
+            }
+        }
+
+      
+        adicionarButton.addEventListener('click', adicionarItem);
+        removerButton.addEventListener('click', removerItem);
+    </script>
+  </body>
+  </html>
