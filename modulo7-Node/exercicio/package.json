@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-     "start": "node index.js"
+    "start": "npx nodemon index.js",
+    "start:prod": "node index.js"
   },
   "keywords": [],
   "author": "Janaina Ferreira",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4"
+  }
 }
