@@ -1,16 +1,16 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import dotenv from 'dotenv';
 
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
 const directoryPath = process.argv[2] || './';
-
 const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
     if (req.url === '/') {
-        
+      
         fs.readdir(directoryPath, (err, files) => {
             if (err) {
                 res.writeHead(500, { 'Content-Type': 'text/plain' });
@@ -25,13 +25,11 @@ const server = http.createServer((req, res) => {
                 fileList += `<a href="/file/${file}">${file}</a><br>`;
             });
 
-            
             res.writeHead(200, { 'Content-Type': 'text/html' });
             res.write(fileList);
             res.end();
         });
     } else if (req.url.startsWith('/file/')) {
-        
         const fileName = req.url.replace('/file/', '');
         const filePath = path.join(directoryPath, fileName);
 
@@ -44,9 +42,7 @@ const server = http.createServer((req, res) => {
                 return;
             }
 
-          
             res.writeHead(200, { 'Content-Type': 'text/html' });
-           
             res.write(`<pre>${data}</pre>`);
             res.write('<br><a href="/">Voltar</a>');
             res.end();
@@ -57,7 +53,6 @@ const server = http.createServer((req, res) => {
         res.end();
     }
 });
-
 
 server.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
