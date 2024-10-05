@@ -32,7 +32,7 @@ export const profs = (req: Request, res: Response) => {
 // Função para a rota "/hb1"
 export const hb1 = (req: Request, res: Response) => {
     res.render('main/hb1', {
-        mensagem: 'Olá, você está aprendendo Express + HBS!',
+        mensagem: 'Universidade Federal do Amazonas',
         layout: false,
     });
 };

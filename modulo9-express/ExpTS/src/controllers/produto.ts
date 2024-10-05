@@ -11,9 +11,6 @@ export const index = async (req: Request, res: Response) => {
         res.status(500).json(err);
     }
 };
-
-
-
 //const create = async(req: Request, res: Response)=>{
   //  if(req.method === 'GET'){
     //    res.render('produto/create');
@@ -22,10 +19,10 @@ export const index = async (req: Request, res: Response) => {
 // Função para renderizar o formulário de criação
 export const create = async (req: Request, res: Response) => {
     if (req.method === 'GET') {
-        res.render('produto/create'); // Renderiza o formulário
+        res.render('produto/create'); 
     } else if (req.method === 'POST') {
         try {
-            const novoProduto: Produto = req.body; // Obtém os dados do formulário
+            const novoProduto: Produto = req.body; 
 
             // Enviar dados para a API ou banco de dados
             await axios.post(`${process.env.DB_SERVER}/produtos`, novoProduto);
@@ -34,7 +31,7 @@ export const create = async (req: Request, res: Response) => {
             res.redirect('/produtos');
         } catch (error) {
             console.error(error);
-            res.status(500).send("Erro ao criar produto"); // Lidar com erro
+            res.status(500).send("Erro ao criar produto"); 
         }
     }
 };
@@ -54,10 +51,6 @@ const read = async (req: Request, res: Response) => {
     }
 };
 
-
-
-
-
 export const update = async (req: Request, res: Response) => {
     const { id } = req.params;
     if (req.method === 'GET') {
@@ -71,8 +64,8 @@ export const update = async (req: Request, res: Response) => {
     } else if (req.method === 'POST') {
         try {
             const produtoAtualizado: Produto = req.body; // Obtém os dados do formulário
-            await axios.put(`${process.env.DB_SERVER}/produtos/${id}`, produtoAtualizado); // Atualiza o produto
-            res.redirect('/produtos'); // Redireciona após a atualização
+            await axios.put(`${process.env.DB_SERVER}/produtos/${id}`, produtoAtualizado); 
+            res.redirect('/produtos'); 
         } catch (error) {
             console.error(error);
             res.status(500).send("Erro ao atualizar produto");
@@ -83,8 +76,8 @@ export const update = async (req: Request, res: Response) => {
 export const remove = async (req: Request, res: Response) => {
     const { id } = req.params;
     try {
-        await axios.delete(`${process.env.DB_SERVER}/produtos/${id}`); // Remove o produto
-        res.redirect('/produtos'); // Redireciona após a remoção
+        await axios.delete(`${process.env.DB_SERVER}/produtos/${id}`); 
+        res.redirect('/produtos'); 
     } catch (error) {
         console.error(error);
         res.status(500).send("Erro ao remover produto");

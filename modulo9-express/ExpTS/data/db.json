@@ -1,28 +1,28 @@
 {
   "produtos": [
     {
-      "nome": "Celular",
-      "preco": "150",
-      "estoque": "9",
-      "id": "1"
-    },
-    {
-      "id": "2",
       "nome": "Tablet",
-      "preco": 200,
-      "estoque": 8
+      "preco": "200",
+      "estoque": "9",
+      "id": "2"
     },
     {
       "nome": "Monitor",
       "preco": "150",
-      "estoque": "12",
+      "estoque": "13",
       "id": "3"
     },
     {
-      "id": "2875",
-      "nome": "notebook gamer",
-      "preco": "23",
-      "estoque": "3"
+      "nome": "computador",
+      "preco": "19000",
+      "estoque": "1",
+      "id": "6517"
+    },
+    {
+      "id": "d839",
+      "nome": "celular",
+      "preco": "2000",
+      "estoque": "5"
     }
   ]
 }

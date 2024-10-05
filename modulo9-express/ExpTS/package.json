@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "current": "concurrently \"npm run start\" \"npm run scss\"",
     "start": "nodemon --watch src --exec ts-node src/index.ts",
     "build": "npx tsc",
     "start:prod": "node build/index.js",
@@ -10,7 +11,8 @@
     "tsc:status": "npx tsc --extendedDiagnostics",
     "eslint": "npx eslint src/",
     "prettier": "npx prettier --write src/",
-    "start:db": "npx json-server --watch data/db.json --port 3000"
+    "start:db": "npx json-server --watch data/db.json --port 3000",
+    "scss": "sass --watch public/scss:public/css"
   },
   "keywords": [],
   "author": "Jannah",
@@ -18,10 +20,12 @@
   "description": "",
   "dependencies": {
     "axios": "^1.7.7",
+    "concurrently": "^9.0.1",
     "cookie": "^0.7.1",
     "dotenv": "^16.4.5",
     "envalid": "^8.0.0",
     "express": "^4.21.0",
+    "express-basico": "file:",
     "express-handlebars": "^8.0.1",
     "install": "^0.13.0",
     "json-server": "^1.0.0-beta.3",
