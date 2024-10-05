@@ -1,0 +1,28 @@
+{
+  "produtos": [
+    {
+      "nome": "Celular",
+      "preco": "150",
+      "estoque": "9",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Tablet",
+      "preco": 200,
+      "estoque": 8
+    },
+    {
+      "nome": "Monitor",
+      "preco": "150",
+      "estoque": "12",
+      "id": "3"
+    },
+    {
+      "id": "2875",
+      "nome": "notebook gamer",
+      "preco": "23",
+      "estoque": "3"
+    }
+  ]
+}
