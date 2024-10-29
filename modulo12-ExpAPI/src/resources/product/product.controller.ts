@@ -24,7 +24,7 @@ const index = async (req: Request, res: Response): Promise<void> => {
 const create = async (req: Request, res: Response): Promise<void> => {
   try {
     const product: CreateProductDto = req.body;
-    if (!(await checkNameIsAvailable(product.name))) {
+    if (await checkNameIsAvailable(product.name)) {
       const newProduct = await createProduct(product);
       res.status(StatusCodes.CREATED).json(newProduct);
     } else {
