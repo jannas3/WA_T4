@@ -1,0 +1,25 @@
+# Criar a pasta da atividade
+cord_cont_exerc
+
+#Construir as imagens dos contêineres
+
+# Constrói a imagem do front-end
+docker build -t front-app ./front
+
+# Constrói a imagem do back-end
+docker build -t back-app ./back
+
+# Criar uma rede personalizada para comunicação entre os contêineres
+docker network create app-network
+
+#  Executar os contêineres
+
+# Iniciar o contêiner do back-end
+docker run -d --name back --network app-network -p 4000:4000 back-app
+
+# Iniciar o contêiner do front-end
+docker run -d --name front --network app-network -p 3000:3000 front-app
+
+# Testar a comunicação entre os contêineres
+# Acesse o front-end no navegador: http://localhost:3000
+# Submeta uma mensagem no campo de texto e verifique o terminal do contêiner back.js para ver se a mensagem foi recebida.

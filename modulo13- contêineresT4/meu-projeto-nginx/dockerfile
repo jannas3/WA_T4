@@ -1,0 +1,14 @@
+# Usar Ubuntu como base
+FROM ubuntu:latest
+
+# Atualizar pacotes e instalar Nginx
+RUN apt-get update && apt-get install -y nginx
+
+# Alterar a configuração para que o Nginx escute na porta 7000
+RUN sed -i 's/listen 80;/listen 7000;/g' /etc/nginx/sites-available/default
+
+# Expor a porta 7000 no contêiner
+EXPOSE 7000
+
+# Comando para iniciar o Nginx no primeiro plano
+CMD ["nginx", "-g", "daemon off;"]
