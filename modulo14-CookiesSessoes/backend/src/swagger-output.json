@@ -1,0 +1,509 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API da Loja Online",
+    "description": "Documentação da API de Loja Virtual",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5566",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/v1/signup": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "senha": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/produto/": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Produto"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/produto/{id}": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Produto"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Produto"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/language/": {
+      "post": {
+        "tags": [
+          "Language"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lang": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/usuario/": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/v1/usuario/{id}": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Usuario"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateProdutoDto": {
+      "type": "object",
+      "properties": {
+        "nome": {
+          "type": "string",
+          "example": "Chave Inglesa"
+        },
+        "preco": {
+          "type": "number",
+          "example": 49
+        },
+        "estoque": {
+          "type": "number",
+          "example": 15
+        }
+      }
+    },
+    "Produto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "b6d4e5a1-3443-42b9-bff0-7f6a10de6f8e"
+        },
+        "nome": {
+          "type": "string",
+          "example": "Parafuso"
+        },
+        "preco": {
+          "type": "number",
+          "example": 5.5
+        },
+        "estoque": {
+          "type": "number",
+          "example": 200
+        },
+        "createdAt": {
+          "type": "string",
+          "example": "2023-11-07T19:40:12.645Z"
+        },
+        "updatedAt": {
+          "type": "string",
+          "example": "2023-11-07T19:40:12.645Z"
+        }
+      }
+    },
+    "Produtos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "1b9d99d0-f083-4f9f-88f5-3e5e5b617f1a"
+          },
+          "nome": {
+            "type": "string",
+            "example": "Fita Métrica"
+          },
+          "preco": {
+            "type": "number",
+            "example": 18.99
+          },
+          "estoque": {
+            "type": "number",
+            "example": 50
+          },
+          "createdAt": {
+            "type": "string",
+            "example": "2023-11-07T19:35:45.645Z"
+          },
+          "updatedAt": {
+            "type": "string",
+            "example": "2023-11-07T19:40:12.645Z"
+          }
+        }
+      }
+    },
+    "CreateUsuarioDto": {
+      "type": "object",
+      "properties": {
+        "nome": {
+          "type": "string",
+          "example": "Carlos Silva"
+        },
+        "email": {
+          "type": "string",
+          "example": "carlos.silva@gmail.com"
+        },
+        "senha": {
+          "type": "string",
+          "example": "carlos123"
+        },
+        "tipoUsuarioId": {
+          "type": "string",
+          "example": "52a7c63a-77f8-4a50-853e-9f697f72b7fd"
+        }
+      }
+    },
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "a7b8c0a9-d60d-42b1-a445-82adf2d8fdb6"
+        },
+        "nome": {
+          "type": "string",
+          "example": "Carlos Silva"
+        },
+        "email": {
+          "type": "string",
+          "example": "carlos.silva@gmail.com"
+        },
+        "senha": {
+          "type": "string",
+          "example": "carlos123"
+        },
+        "tipoUsuarioId": {
+          "type": "string",
+          "example": "52a7c63a-77f8-4a50-853e-9f697f72b7fd"
+        }
+      }
+    },
+    "Usuarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "2e7f3471-e96c-46d3-92c3-fbb79efbcde2"
+          },
+          "nome": {
+            "type": "string",
+            "example": "Ana Costa"
+          },
+          "email": {
+            "type": "string",
+            "example": "ana.costa@gmail.com"
+          },
+          "senha": {
+            "type": "string",
+            "example": "ana1234"
+          },
+          "tipoUsuarioId": {
+            "type": "string",
+            "example": "8b42a29e-8fa5-44d4-a3f6-dfeefb1075bc"
+          }
+        }
+      }
+    },
+    "LoginDto": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "carlos.silva@gmail.com"
+        },
+        "senha": {
+          "type": "string",
+          "example": "carlos123"
+        }
+      }
+    }
+  }
+}

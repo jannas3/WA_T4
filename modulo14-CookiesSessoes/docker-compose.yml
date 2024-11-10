@@ -1,0 +1,27 @@
+services:
+  backend:
+    container_name: backend_expapi
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+    depends_on:
+      - db  
+
+  db:
+    container_name: db_expapi
+    image: mysql:8.0
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - mysql_config:/etc/mysql
+    ports:
+      - ${MYSQL_PORT}:3306
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+
+volumes:
+  mysql_data:
+  mysql_config:
