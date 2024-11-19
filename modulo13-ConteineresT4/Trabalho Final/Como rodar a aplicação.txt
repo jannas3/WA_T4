@@ -1,4 +1,4 @@
 Como rodar:
-docker compose up -d --build
+docker compose up  --build
 docker exec backendlivros npx prisma migrate dev --name init
 
