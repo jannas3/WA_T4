@@ -1,4 +1,5 @@
 Como rodar:
-docker compose up --build 
-docker-compose exec backendlivros npx prisma migrate dev --name init
+docker-compose up 
+localhost:8080
+localhost:8000
 

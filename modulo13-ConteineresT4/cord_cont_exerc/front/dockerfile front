@@ -1,18 +1,13 @@
-# Usa a imagem base do Node.js
 FROM node:14
 
-# Cria um diretório de trabalho para o front-end
 WORKDIR /app
 
-# Copia o arquivo front.js para o diretório de trabalho do contêiner
 COPY front.js .
 
-# Inicializa o npm e instala a dependência querystring
 RUN npm init -y
 RUN npm install querystring
 
-# Expõe a porta 3000 para o contêiner
 EXPOSE 3000
 
-# Comando para rodar o front.js
+
 CMD ["node", "front.js"]

@@ -1,0 +1,2 @@
+docker build -t nginx-ubuntu .
+docker run -d -p 7000:7000 --name meu-projeto-nginx nginx-ubuntu

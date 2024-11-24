@@ -1,0 +1,9 @@
+Network
+docker build -t ubuntu-pingador -f Dockerfile .
+docker network create ping-ubuntu-network
+
+docker run -d --name pingador1 --network ping-ubuntu-network ubuntu-pingador
+docker run -d --name pingador2 --network ping-ubuntu-network ubuntu-pingador
+
+docker exec -it pingador1 bash
+ping pingador2
