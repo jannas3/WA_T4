@@ -1,6 +1,5 @@
-//src/components/ListagemCarrinho.tsx
 import ItemCarrinho from "../ItemCarrinho/ItemCarrinho";
-
+import { Carrinho } from "@/app/types/carrinho";
 interface IListagemCarrinhoProps {
   itensCarrinho: Carrinho[] | null;
   removerItemDoCarrinho: (id: string) => void;

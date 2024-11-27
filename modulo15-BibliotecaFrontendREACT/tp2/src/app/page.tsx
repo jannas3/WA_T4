@@ -1,45 +1,15 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ListagemProduto from "./components/ListagemProdutos/ListagemProdutos";
 import ResumoCarrinho from "./components/ResumoCarrinho/ResumoCarrinho";
 import { ItemCarrinho } from "./types/carrinho";
 import { Produto } from "./types/produto";
-import api from "./services/api";
+
 
 export default function Produtos() {
-  const [produtos, setProdutos] = useState<Produto[] | null>(null);
   const [carrinho, setCarrinho] = useState<ItemCarrinho[]>([]);
   const [valorTotal, setValorTotal] = useState<number>(0);
   const [qtdItens, setQtdItens] = useState<number>(0);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    let isMounted = true;
-
-    api
-      .get(`/produto/`, {
-        signal: controller.signal,
-      })
-      .then((response) => {
-        if (isMounted) {
-          setProdutos(response.data);
-        }
-      })
-      .catch((error) => {
-        if (error.name === "AbortError") {
-          console.log("Requisição cancelada");
-        } else {
-          console.error("Erro ao buscar produtos:", error);
-        }
-      });
-
-    return () => {
-      controller.abort();
-      isMounted = false;
-    };
-  }, []);
 
   const adicionarAoCarrinho = (produto: Produto) => {
     console.log("Produto adicionado ao carrinho:", produto);
@@ -79,14 +49,7 @@ export default function Produtos() {
           precoTotal={valorTotal}
           quantidadeItensTotal={qtdItens}
         />
-        {produtos ? (
-          <ListagemProduto
-            produtos={produtos}
-            adicionarAoCarrinho={adicionarAoCarrinho}
-          />
-        ) : (
-          <p>Carregando produtos...</p>
-        )}
+        <ListagemProduto adicionarAoCarrinho={adicionarAoCarrinho} />
       </div>
     </main>
   );

@@ -1,4 +1,3 @@
-//src/components/ListagemCarrinho.tsx
 import { ProdutoAPI } from "@/app/types/ProdutoAPI";
 import ItemFavorito from "../ItemFavorito/ItemFavorito";
 

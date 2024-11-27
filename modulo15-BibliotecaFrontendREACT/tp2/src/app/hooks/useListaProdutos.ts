@@ -1,4 +1,3 @@
-// src/app/hooks/useListaProdutos.ts
 import { useQuery } from "@tanstack/react-query";
 import api from "@/app/services/api";
 import { Produto } from "@/app/types/produto";

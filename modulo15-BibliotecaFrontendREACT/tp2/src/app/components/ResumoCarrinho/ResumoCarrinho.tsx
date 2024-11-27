@@ -1,4 +1,3 @@
-//src/app/components/ResumoCarrinho/ResumoCarrinho.tsx
 interface ResumoCarrinhoProps {
   precoTotal: number;  
   quantidadeItensTotal: number;

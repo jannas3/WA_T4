@@ -1,4 +1,3 @@
-// src/api/services/produtos.ts
 import axios from "axios";
 import { ProdutoAPI } from "../types/ProdutoAPI";
 

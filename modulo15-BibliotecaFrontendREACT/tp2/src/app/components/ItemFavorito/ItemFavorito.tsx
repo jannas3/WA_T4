@@ -1,6 +1,5 @@
 import { ProdutoAPI } from "@/app/types/ProdutoAPI";
 
-//src/components/ItemCarrinho/ItemCarrinho.tsx
 type itemCarrinhoProp = {
   item: ProdutoAPI;
   remover: (id: string) => void;

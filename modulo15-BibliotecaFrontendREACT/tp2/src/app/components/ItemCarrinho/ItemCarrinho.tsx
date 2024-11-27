@@ -1,4 +1,4 @@
-//src/components/ItemCarrinho/ItemCarrinho.tsx
+import { Carrinho } from "@/app/types/carrinho";
 interface IItemCarrinhoProps {
     carrinho: Carrinho;
     removerItemDoCarrinho: (id: string) => void;

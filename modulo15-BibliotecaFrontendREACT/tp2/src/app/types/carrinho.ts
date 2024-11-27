@@ -1,4 +1,3 @@
-// src/app/types/carrinho.ts
 export interface ItemCarrinho {
   id: string;
   nome: string;
@@ -6,6 +5,6 @@ export interface ItemCarrinho {
   quantidade: number;
 }
 
-interface Carrinho {
+export interface Carrinho {
   itensCarrinho: ItemCarrinho[];
 }

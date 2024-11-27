@@ -1,5 +1,3 @@
-//src/app/ hooks/useDetalhesProduto.ts
-import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getDetalhesProduto } from "../services/produtos";
 

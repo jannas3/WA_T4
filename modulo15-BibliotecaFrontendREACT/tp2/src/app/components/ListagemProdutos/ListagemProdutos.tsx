@@ -1,4 +1,3 @@
-// src/app/components/ListagemProdutos/ListagemProdutos.tsx
 import { useListaProdutos } from "@/app/hooks/useListaProdutos";
 import CardProduto from "../CardProduto/CardProduto";
 import { Produto } from "@/app/types/produto";  

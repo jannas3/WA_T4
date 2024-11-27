@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Image from "next/image";
 import { Produto } from "../../types/produto";
 import { useRouter } from "next/navigation";
